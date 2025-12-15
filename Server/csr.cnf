@@ -1,0 +1,25 @@
+[req]
+default_bits        = 2048
+prompt              = no
+default_md          = sha256
+distinguished_name  = subject
+req_extensions      = v3_req
+
+[subject]
+countryName         = xx
+stateOrProvinceName = xx
+localityName        = xx
+organizationName    = xx 
+OU                  = xx
+commonName          = abc.internal
+emailAddress        = xx
+subjectAltName      = xx
+
+[v3_req]
+basicConstraints       = CA:false
+extendedKeyUsage       = serverAuth
+subjectAltName         = @alt_names
+
+[alt_names]
+DNS.1 = kali-server
+IP.1 = 192.168.88.131
